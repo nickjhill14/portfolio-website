@@ -22,7 +22,7 @@ describe('<LandingPage/>', () => {
                 'href',
                 'https://www.thoughtworks.com'
             );
-            expect(twLink).toHaveAttribute('target', '_blank');
+            expect(twLink).toHaveAttribute('rel', 'noopener');
         });
     });
 });

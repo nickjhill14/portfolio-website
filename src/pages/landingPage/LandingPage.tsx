@@ -6,7 +6,7 @@ export default function LandingPage() {
             <h1 className="headingLine">
                 I'm <b>Nicholas Hill</b>, a <b>Software Developer Consultant</b>{' '}
                 at{' '}
-                <a href="https://www.thoughtworks.com" target="_blank">
+                <a href="https://www.thoughtworks.com" rel="noopener">
                     Thoughtworks
                 </a>{' '}
                 in <b>London</b>.
