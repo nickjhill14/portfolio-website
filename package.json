@@ -16,14 +16,12 @@
         "@types/react": "^17.0.43",
         "@types/react-dom": "^17.0.14",
         "prettier": "2.6.1",
-        "typescript": "^4.6.3",
-        "web-vitals": "^2.1.4"
+        "typescript": "^4.6.3"
     },
     "scripts": {
         "start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
-        "eject": "react-scripts eject",
         "prettier": "npx prettier --write .",
         "lint": "eslint **/*.{ts,tsx}",
         "pre-push": "npm run prettier && npm run lint && npm test -- --watchAll=false"
@@ -32,18 +30,6 @@
         "extends": [
             "react-app",
             "react-app/jest"
-        ]
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
         ]
     }
 }
