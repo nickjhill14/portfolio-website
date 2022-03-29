@@ -6,7 +6,11 @@ export default function App() {
         <header aria-label="Landing Page Header">
             <h1 className="headingLine">
                 I'm <b>Nicholas Hill</b>, a <b>Software Developer Consultant</b>{' '}
-                at <b>Thoughtworks</b> in <b>London</b>.
+                at{' '}
+                <a href="https://www.thoughtworks.com" target="_blank">
+                    Thoughtworks
+                </a>{' '}
+                in <b>London</b>.
                 <br />I graduated with a <b>Masters degree</b> in{' '}
                 <b>Computer Science</b> from the <b>University of Nottingham</b>
                 .

@@ -21,6 +21,16 @@ b {
     color: midnightblue;
 }
 
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: midnightblue;
+}
+
+a:hover {
+    color: darkslateblue;
+}
+
 .headingLine {
     display: none;
 }
