@@ -23,7 +23,7 @@
         "eject": "react-scripts eject",
         "prettier": "npx prettier --write .",
         "lint": "eslint **/*.{ts,tsx}",
-        "pre-push": "npm run lint && npm test -- --watchAll=false"
+        "pre-push": "npm run prettier && npm run lint && npm test -- --watchAll=false"
     },
     "eslintConfig": {
         "extends": [
