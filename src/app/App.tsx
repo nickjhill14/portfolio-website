@@ -4,17 +4,16 @@ import './app.css';
 export default function App() {
     return (
         <header aria-label="Landing Page Header">
-            {headingLines.map((headingLine, index) => (
-                <h1 className="headingLine" key={`heading-line-${index}`}>
-                    {headingLine}
-                </h1>
-            ))}
+            <h1 className="headingLine">
+                I'm <b>Nicholas Hill</b>, a <b>Software Developer Consultant</b>{' '}
+                at <b>Thoughtworks</b> in <b>London</b>.
+                <br />I graduated with a <b>Masters degree</b> in{' '}
+                <b>Computer Science</b> from the <b>University of Nottingham</b>
+                .
+                <br />
+                I've also worked and studied <b>Mandarin Chinese</b> in{' '}
+                <b>Shenzhen</b> and <b>Hong Kong</b>.
+            </h1>
         </header>
     );
 }
-
-export const headingLines = [
-    "I'm Nicholas Hill, a Software Developer Consultant at Thoughtworks in London.",
-    'I graduated with a Masters degree in Computer Science from the University of Nottingham.',
-    "I've also worked and studied Mandarin Chinese in Shenzhen and Hong Kong.",
-];
