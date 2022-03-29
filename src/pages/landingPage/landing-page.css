@@ -1,5 +1,5 @@
 html {
-    background: url('../assets/images/landing-page-bg.jpg') no-repeat center
+    background: url('../../assets/images/landing-page-bg.jpg') no-repeat center
         center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
