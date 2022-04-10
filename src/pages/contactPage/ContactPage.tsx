@@ -1,8 +1,10 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
+import cvPDF from '../../assets/docs/nicholas-hill-cv.pdf';
+import './contact-page.css';
 
 export function ContactPage() {
     return (
-        <>
+        <section className="contactPage" aria-label="Contact Page">
             <h1>Contact</h1>
             <ExternalLink href="mailto:nicholasjhill@live.co.uk" name="Email" />
             <ExternalLink
@@ -18,10 +20,7 @@ export function ContactPage() {
                 href="https://open.spotify.com/album/42Tfcc1zRcl4bisuqmrzTW?si=SIqzqFprTgmT9nvc7i8wAQ&nd=1"
                 name="Spotify"
             />
-            <ExternalLink
-                href="../../assets/docs/nicholas-hill-cv.pdf"
-                name="CV"
-            />
-        </>
+            <ExternalLink href={cvPDF} name="CV" />
+        </section>
     );
 }

@@ -7,6 +7,9 @@ describe('<ContactPage/>', () => {
             render(<ContactPage />);
 
             expect(
+                screen.getByRole('region', { name: 'Contact Page' })
+            ).toBeInTheDocument();
+            expect(
                 screen.getByRole('heading', { name: 'Contact' })
             ).toBeInTheDocument();
             expect(
@@ -40,7 +43,7 @@ describe('<ContactPage/>', () => {
                 'Spotify',
                 'https://open.spotify.com/album/42Tfcc1zRcl4bisuqmrzTW?si=SIqzqFprTgmT9nvc7i8wAQ&nd=1',
             ],
-            ['CV', '../../assets/docs/nicholas-hill-cv.pdf'],
+            ['CV', 'nicholas-hill-cv.pdf'],
         ])('opens link (%s) in new tab at href (%s)', (linkName, href) => {
             render(<ContactPage />);
 
