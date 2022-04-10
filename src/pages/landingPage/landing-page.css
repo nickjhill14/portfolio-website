@@ -9,12 +9,12 @@
 }
 
 .headingLine {
-    display: none;
-    margin-top: 25px;
-    margin-left: 25px;
     font-size: large;
     line-height: 45px;
     letter-spacing: 2px;
+    display: none;
+    margin-top: 25px;
+    margin-left: 25px;
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
 }
@@ -27,14 +27,4 @@
 
 .headingAccent {
     color: midnightblue;
-}
-
-.headingLink {
-    font-weight: bold;
-    text-decoration: none;
-    color: midnightblue;
-}
-
-.headingLink:hover {
-    color: darkslateblue;
 }

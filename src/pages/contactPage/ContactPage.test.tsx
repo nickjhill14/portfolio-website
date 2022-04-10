@@ -13,6 +13,9 @@ describe('<ContactPage/>', () => {
                 screen.getByRole('heading', { name: 'Contact' })
             ).toBeInTheDocument();
             expect(
+                screen.getByRole('article', { name: 'Contact Links' })
+            ).toBeInTheDocument();
+            expect(
                 screen.getByRole('link', { name: 'Email' })
             ).toBeInTheDocument();
             expect(

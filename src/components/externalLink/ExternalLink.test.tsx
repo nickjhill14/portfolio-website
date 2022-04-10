@@ -1,12 +1,22 @@
 import { render, screen } from '@testing-library/react';
-import { ExternalLink } from './ExternalLink';
+import { ExternalLink, ExternalLinkProps } from './ExternalLink';
+
+function renderExternalLink(propsOverride: Partial<ExternalLinkProps>) {
+    const props: ExternalLinkProps = {
+        name: 'Some Link',
+        href: '#',
+        ...propsOverride,
+    };
+
+    render(<ExternalLink {...props} />);
+}
 
 describe('<ExternalLink/>', () => {
     describe('rendering', () => {
         it('renders link', () => {
             const name = 'Google';
 
-            render(<ExternalLink name={name} href="#" />);
+            renderExternalLink({ name });
 
             expect(screen.getByRole('link', { name })).toBeInTheDocument();
         });
@@ -17,7 +27,7 @@ describe('<ExternalLink/>', () => {
             const name = 'Google';
             const href = 'google.com';
 
-            render(<ExternalLink name={name} href={href} />);
+            renderExternalLink({ name, href });
 
             const link = screen.getByRole('link', { name });
             expect(link).toHaveAttribute('href', href);

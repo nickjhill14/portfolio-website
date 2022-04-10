@@ -1,5 +1,6 @@
 import React from 'react';
 import './landing-page.css';
+import { ExternalLink } from '../../components/externalLink/ExternalLink';
 
 export default function LandingPage() {
     return (
@@ -8,14 +9,10 @@ export default function LandingPage() {
                 I'm <b className="headingAccent">Nicholas Hill</b>, a{' '}
                 <b className="headingAccent">Software Developer Consultant</b>{' '}
                 at{' '}
-                <a
+                <ExternalLink
+                    name="Thoughtworks"
                     href="https://www.thoughtworks.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="headingLink"
-                >
-                    Thoughtworks
-                </a>{' '}
+                />{' '}
                 in <b className="headingAccent">London</b>.
                 <br />I graduated with a{' '}
                 <b className="headingAccent">Masters degree</b> in{' '}
