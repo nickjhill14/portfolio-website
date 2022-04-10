@@ -24,6 +24,9 @@ describe('<ContactPage/>', () => {
             expect(
                 screen.getByRole('link', { name: 'Spotify' })
             ).toBeInTheDocument();
+            expect(
+                screen.getByRole('link', { name: 'CV' })
+            ).toBeInTheDocument();
         });
     });
 
@@ -37,16 +40,14 @@ describe('<ContactPage/>', () => {
                 'Spotify',
                 'https://open.spotify.com/album/42Tfcc1zRcl4bisuqmrzTW?si=SIqzqFprTgmT9nvc7i8wAQ&nd=1',
             ],
-        ])(
-            'opens link in new tab title and contact buttons',
-            (linkName, href) => {
-                render(<ContactPage />);
+            ['CV', '../../assets/docs/nicholas-hill-cv.pdf'],
+        ])('opens link (%s) in new tab at href (%s)', (linkName, href) => {
+            render(<ContactPage />);
 
-                const link = screen.getByRole('link', { name: linkName });
-                expect(link).toHaveAttribute('href', href);
-                expect(link).toHaveAttribute('target', '_blank');
-                expect(link).toHaveAttribute('rel', 'noopener noreferrer');
-            }
-        );
+            const link = screen.getByRole('link', { name: linkName });
+            expect(link).toHaveAttribute('href', href);
+            expect(link).toHaveAttribute('target', '_blank');
+            expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+        });
     });
 });

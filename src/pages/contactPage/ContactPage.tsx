@@ -18,6 +18,10 @@ export function ContactPage() {
                 href="https://open.spotify.com/album/42Tfcc1zRcl4bisuqmrzTW?si=SIqzqFprTgmT9nvc7i8wAQ&nd=1"
                 name="Spotify"
             />
+            <ExternalLink
+                href="../../assets/docs/nicholas-hill-cv.pdf"
+                name="CV"
+            />
         </>
     );
 }
