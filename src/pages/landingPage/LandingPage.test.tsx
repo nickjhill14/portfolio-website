@@ -1,29 +1,29 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import LandingPage from './LandingPage';
+import {
+    expectExternalLinkIsSafe,
+    expectRoleIsInDocument,
+} from '../../testUtils/assertionHelpers';
 
 describe('<LandingPage/>', () => {
-    describe('Rendering', () => {
+    describe('rendering', () => {
         it('renders header', () => {
             render(<LandingPage />);
 
-            expect(screen.getByRole('banner', { name: 'Landing Page Header' }));
+            expectRoleIsInDocument('banner', 'Landing Page Header');
             expect(screen.getByRole('heading', { name: /I'm Nicholas Hill/ }));
         });
     });
 
-    describe('Interaction', () => {
+    describe('interaction', () => {
         it('goes to the TW website in a new tab when clicking on TW link', () => {
             render(<LandingPage />);
 
-            const twLink = screen.getByRole('link', { name: 'Thoughtworks' });
-
-            expect(twLink).toHaveAttribute(
-                'href',
+            expectExternalLinkIsSafe(
+                'Thoughtworks',
                 'https://www.thoughtworks.com'
             );
-            expect(twLink).toHaveAttribute('target', '_blank');
-            expect(twLink).toHaveAttribute('rel', 'noopener noreferrer');
         });
     });
 });

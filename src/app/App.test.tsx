@@ -1,12 +1,13 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
+import { expectRoleIsInDocument } from '../testUtils/assertionHelpers';
 
 describe('<App/>', () => {
     it('renders pages', () => {
         render(<App />);
 
-        expect(screen.getByRole('banner', { name: 'Landing Page Header' }));
-        expect(screen.getByRole('heading', { name: 'Contact' }));
+        expectRoleIsInDocument('banner', 'Landing Page Header');
+        expectRoleIsInDocument('region', 'Contact Page');
     });
 });

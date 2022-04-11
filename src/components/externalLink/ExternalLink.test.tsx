@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { ExternalLink, ExternalLinkProps } from './ExternalLink';
+import { expectRoleIsInDocument } from '../../testUtils/assertionHelpers';
 
 function renderExternalLink(propsOverride: Partial<ExternalLinkProps>) {
     const props: ExternalLinkProps = {
@@ -18,7 +19,7 @@ describe('<ExternalLink/>', () => {
 
             renderExternalLink({ name });
 
-            expect(screen.getByRole('link', { name })).toBeInTheDocument();
+            expectRoleIsInDocument('link', name);
         });
     });
 

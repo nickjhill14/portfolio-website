@@ -1,38 +1,24 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import { ContactPage } from './ContactPage';
+import {
+    expectExternalLinkIsSafe,
+    expectRoleIsInDocument,
+} from '../../testUtils/assertionHelpers';
 
 describe('<ContactPage/>', () => {
     describe('rendering', () => {
         it('renders title and contact buttons', () => {
             render(<ContactPage />);
 
-            expect(
-                screen.getByRole('region', { name: 'Contact Page' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('heading', { name: 'Contact' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('article', { name: 'Contact Links' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('link', { name: 'Email' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('link', { name: 'LinkedIn' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('link', { name: 'GitHub' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('link', { name: 'Twitter' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('link', { name: 'Spotify' })
-            ).toBeInTheDocument();
-            expect(
-                screen.getByRole('link', { name: 'CV' })
-            ).toBeInTheDocument();
+            expectRoleIsInDocument('region', 'Contact Page');
+            expectRoleIsInDocument('heading', 'Contact');
+            expectRoleIsInDocument('article', 'Contact Links');
+            expectRoleIsInDocument('link', 'Email');
+            expectRoleIsInDocument('link', 'LinkedIn');
+            expectRoleIsInDocument('link', 'GitHub');
+            expectRoleIsInDocument('link', 'Twitter');
+            expectRoleIsInDocument('link', 'Spotify');
+            expectRoleIsInDocument('link', 'CV');
         });
     });
 
@@ -50,10 +36,7 @@ describe('<ContactPage/>', () => {
         ])('opens link (%s) in new tab at href (%s)', (linkName, href) => {
             render(<ContactPage />);
 
-            const link = screen.getByRole('link', { name: linkName });
-            expect(link).toHaveAttribute('href', href);
-            expect(link).toHaveAttribute('target', '_blank');
-            expect(link).toHaveAttribute('rel', 'noopener noreferrer');
+            expectExternalLinkIsSafe(linkName, href);
         });
     });
 });
