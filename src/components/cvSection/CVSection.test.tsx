@@ -1,5 +1,5 @@
 import CVSection, { CVSectionProps } from './CVSection';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { ExternalLink } from '../externalLink/ExternalLink';
 import { expectRoleIsInDocument } from '../../testUtils/assertionHelpers';
 
@@ -8,7 +8,6 @@ function renderCVSection(propsOverride?: Partial<CVSectionProps>) {
         label: 'Some Label',
         heading: 'Some Heading',
         time: 'Some Time',
-        location: 'Some Location',
         ...propsOverride,
     };
 
@@ -17,7 +16,16 @@ function renderCVSection(propsOverride?: Partial<CVSectionProps>) {
 
 describe('<CVSection/>', () => {
     it('renders the CV section', () => {
-        renderCVSection();
+        const heading = 'Some Heading';
+        const label = 'Some Label';
+        const time = 'Some Time';
+        const props: CVSectionProps = { label, heading, time };
+
+        renderCVSection({ ...props });
+
+        expectRoleIsInDocument('article', label);
+        expectRoleIsInDocument('heading', heading);
+        expect(screen.getByText(time)).toBeInTheDocument();
     });
 
     it('renders the subheading as an ExternalLink', () => {
@@ -36,5 +44,13 @@ describe('<CVSection/>', () => {
         renderCVSection({ subHeading });
 
         expectRoleIsInDocument('heading', subHeading);
+    });
+
+    it('renders the location', () => {
+        const location = 'My Location';
+
+        renderCVSection({ location });
+
+        expect(screen.getByText(location)).toBeInTheDocument();
     });
 });

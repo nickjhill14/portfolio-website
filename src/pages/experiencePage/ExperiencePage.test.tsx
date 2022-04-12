@@ -5,7 +5,7 @@ import {
     expectRoleIsInDocument,
 } from '../../testUtils/assertionHelpers';
 
-describe('<ExperiencePage/>', () => {
+describe('<EducationPage/>', () => {
     describe('rendering', () => {
         it('renders the page', () => {
             render(<ExperiencePage />);

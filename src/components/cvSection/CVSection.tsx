@@ -4,7 +4,7 @@ export interface CVSectionProps {
     label: string;
     heading: string;
     time: string;
-    location: string;
+    location?: string;
     subHeading?: string | JSX.Element;
 }
 

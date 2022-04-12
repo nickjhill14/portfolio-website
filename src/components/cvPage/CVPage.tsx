@@ -12,7 +12,7 @@ export function CVPage(props: CVPageProps) {
 
     return (
         <section className="cvPage" aria-label={label}>
-            <h1 className="cvHeading">{heading}</h1>
+            <h1 className="cvPageHeading">{heading}</h1>
             {children}
         </section>
     );

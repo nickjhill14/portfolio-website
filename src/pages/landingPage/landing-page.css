@@ -8,7 +8,7 @@
     background-size: cover;
 }
 
-.headingLine {
+.landingPageHeading {
     font-size: large;
     line-height: 45px;
     letter-spacing: 2px;
@@ -20,11 +20,11 @@
 }
 
 @media (min-width: 601px) {
-    .headingLine {
+    .landingPageHeading {
         display: block;
     }
 }
 
-.headingAccent {
+.landingPageHeadingAccent {
     color: midnightblue;
 }
