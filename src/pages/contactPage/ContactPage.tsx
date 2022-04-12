@@ -1,12 +1,12 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import cvPDF from '../../assets/docs/nicholas-hill-cv.pdf';
 import './contact-page.css';
+import { CVPage } from '../../components/cvPage/CVPage';
 
 export function ContactPage() {
     return (
-        <section className="contactPage" aria-label="Contact Page">
-            <h1 className="pageHeading">Contact</h1>
-            <article className="contactLinks" aria-label="Contact Links">
+        <CVPage label="Contact Page" heading="Contact">
+            <article className="contactPageLinks" aria-label="Contact Links">
                 <ExternalLink
                     href="mailto:nicholasjhill@live.co.uk"
                     name="Email"
@@ -29,6 +29,6 @@ export function ContactPage() {
                 />
                 <ExternalLink href={cvPDF} name="CV" />
             </article>
-        </section>
+        </CVPage>
     );
 }
