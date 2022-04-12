@@ -1,10 +1,10 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
+import { CVPage } from '../../components/cvPage/CVPage';
 
 export function ExperiencePage() {
     return (
-        <section aria-label="Experience Page">
-            <h1>Experience</h1>
+        <CVPage label="Experience Page" heading="Experience">
             <CVSection
                 label="Thoughtworks Experience"
                 heading="Consultant Developer"
@@ -31,6 +31,6 @@ export function ExperiencePage() {
                 location="UK"
                 subHeading="Hertsmere Leisure & HAP Recruitment"
             />
-        </section>
+        </CVPage>
     );
 }
