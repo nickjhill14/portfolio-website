@@ -8,6 +8,7 @@ describe('<App/>', () => {
         render(<App />);
 
         expectRoleIsInDocument('banner', 'Landing Page Header');
+        expectRoleIsInDocument('region', 'Experience Page');
         expectRoleIsInDocument('region', 'Contact Page');
     });
 });
