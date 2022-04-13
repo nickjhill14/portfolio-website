@@ -2,7 +2,7 @@ import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
 import { CVPage } from '../../components/cvPage/CVPage';
 
-export function ExperiencePage() {
+export default function ExperiencePage() {
     return (
         <CVPage label="Experience Page" heading="Experience">
             <CVSection

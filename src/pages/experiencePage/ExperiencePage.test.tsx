@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ExperiencePage } from './ExperiencePage';
+import ExperiencePage from './ExperiencePage';
 import {
     expectExternalLinkIsSafe,
     expectRoleIsInDocument,

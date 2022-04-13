@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { EducationPage } from './EducationPage';
+import EducationPage from './EducationPage';
 import {
     expectExternalLinkIsSafe,
     expectRoleIsInDocument,

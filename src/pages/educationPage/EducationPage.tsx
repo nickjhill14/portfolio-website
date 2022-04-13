@@ -2,7 +2,7 @@ import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
 import { CVPage } from '../../components/cvPage/CVPage';
 
-export function EducationPage() {
+export default function EducationPage() {
     return (
         <CVPage label="Education Page" heading="Education">
             <CVSection
