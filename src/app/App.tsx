@@ -5,6 +5,7 @@ import AchievementsPage from '../pages/achievementsPage/AchievementsPage';
 import EducationPage from '../pages/educationPage/EducationPage';
 import ProjectsPage from '../pages/projectsPage/ProjectsPage';
 import ExperiencePage from '../pages/experiencePage/ExperiencePage';
+import InvolvementsPage from '../pages/involvementsPage/InvolvementsPage';
 
 export default function App() {
     return (
@@ -14,6 +15,7 @@ export default function App() {
             <EducationPage />
             <ProjectsPage />
             <AchievementsPage />
+            <InvolvementsPage />
             <ContactPage />
         </>
     );

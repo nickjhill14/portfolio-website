@@ -12,6 +12,7 @@ describe('<App/>', () => {
         expectRoleIsInDocument('region', 'Education Page');
         expectRoleIsInDocument('region', 'Projects Page');
         expectRoleIsInDocument('region', 'Achievements Page');
+        expectRoleIsInDocument('region', 'Involvements Page');
         expectRoleIsInDocument('region', 'Contact Page');
     });
 });
