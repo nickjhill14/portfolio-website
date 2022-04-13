@@ -17,7 +17,7 @@ export default function CVSection(props: CVSectionProps) {
             <h3 className="cvSectionSubHeading">{subHeading}</h3>
             <div className="cvSectionTimeLocation">
                 <p>{time}</p>
-                <p>{location}</p>
+                {location && <p>{location}</p>}
             </div>
         </article>
     );
