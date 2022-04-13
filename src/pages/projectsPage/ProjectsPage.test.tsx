@@ -77,7 +77,7 @@ describe('<ProjectsPage/>', () => {
     });
 
     describe('interaction', () => {
-        it('opens UON link in new tab', () => {
+        it('opens UON links in a new tab', () => {
             render(<ProjectsPage />);
 
             expectAllExternalLinksAreSafe(
