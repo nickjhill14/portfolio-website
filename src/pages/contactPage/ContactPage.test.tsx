@@ -1,4 +1,4 @@
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import ContactPage from './ContactPage';
 import {
     expectExternalLinkIsSafe,
@@ -11,7 +11,13 @@ describe('<ContactPage/>', () => {
             render(<ContactPage />);
 
             expectRoleIsInDocument('region', 'Contact Page');
-            expectRoleIsInDocument('heading', 'Contact');
+            const headingElement = screen.getByRole('heading', {
+                name: 'Contact',
+            });
+            expect(headingElement.previousElementSibling).toHaveAttribute(
+                'data-icon',
+                'address-book'
+            );
             expectRoleIsInDocument('article', 'Contact Links');
             expectRoleIsInDocument('link', 'Email');
             expectRoleIsInDocument('link', 'LinkedIn');

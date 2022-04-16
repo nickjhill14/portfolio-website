@@ -1,10 +1,15 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
 import { CVPage } from '../../components/cvPage/CVPage';
+import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 
 export default function ExperiencePage() {
     return (
-        <CVPage label="Experience Page" heading="Experience">
+        <CVPage
+            label="Experience Page"
+            heading="Experience"
+            headingIcon={faBriefcase}
+        >
             <CVSection
                 label="Thoughtworks Experience"
                 heading="Consultant Developer"

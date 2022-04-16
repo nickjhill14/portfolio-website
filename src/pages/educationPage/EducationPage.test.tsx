@@ -11,7 +11,13 @@ describe('<EducationPage/>', () => {
             render(<EducationPage />);
 
             expectRoleIsInDocument('region', 'Education Page');
-            expectRoleIsInDocument('heading', 'Education');
+            const headingElement = screen.getByRole('heading', {
+                name: 'Education',
+            });
+            expect(headingElement.previousElementSibling).toHaveAttribute(
+                'data-icon',
+                'user-graduate'
+            );
             expect(screen.getAllByRole('article')).toHaveLength(3);
         });
 

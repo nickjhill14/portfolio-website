@@ -11,7 +11,13 @@ describe('<ProjectsPage/>', () => {
             render(<ProjectsPage />);
 
             expectRoleIsInDocument('region', 'Projects Page');
-            expectRoleIsInDocument('heading', 'Projects');
+            const headingElement = screen.getByRole('heading', {
+                name: 'Projects',
+            });
+            expect(headingElement.previousElementSibling).toHaveAttribute(
+                'data-icon',
+                'robot'
+            );
             expect(screen.getAllByRole('article')).toHaveLength(4);
             expect(
                 screen.getAllByRole('link', {

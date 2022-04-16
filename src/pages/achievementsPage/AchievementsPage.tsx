@@ -1,10 +1,15 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
 import { CVPage } from '../../components/cvPage/CVPage';
+import { faTrophy } from '@fortawesome/free-solid-svg-icons';
 
 export default function AchievementsPage() {
     return (
-        <CVPage label="Achievements Page" heading="Achievements">
+        <CVPage
+            label="Achievements Page"
+            heading="Achievements"
+            headingIcon={faTrophy}
+        >
             <CVSection
                 label="7Digital/Esendex Prize for Software Quality Achievement"
                 heading="7Digital/Esendex Prize for Software Quality"

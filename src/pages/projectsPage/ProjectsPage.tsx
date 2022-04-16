@@ -1,10 +1,11 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
 import { CVPage } from '../../components/cvPage/CVPage';
+import { faRobot } from '@fortawesome/free-solid-svg-icons';
 
 export default function ProjectsPage() {
     return (
-        <CVPage label="Projects Page" heading="Projects">
+        <CVPage label="Projects Page" heading="Projects" headingIcon={faRobot}>
             <CVSection
                 label="Autonomous Robot Image Tagging System Project"
                 heading="Autonomous Robot Image Tagging System"

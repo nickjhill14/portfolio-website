@@ -2,10 +2,15 @@ import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import cvPDF from '../../assets/docs/nicholas-hill-cv.pdf';
 import './contact-page.css';
 import { CVPage } from '../../components/cvPage/CVPage';
+import { faAddressBook } from '@fortawesome/free-solid-svg-icons';
 
 export default function ContactPage() {
     return (
-        <CVPage label="Contact Page" heading="Contact">
+        <CVPage
+            label="Contact Page"
+            heading="Contact"
+            headingIcon={faAddressBook}
+        >
             <article className="contactPageLinks" aria-label="Contact Links">
                 <ExternalLink
                     href="mailto:nicholasjhill@live.co.uk"

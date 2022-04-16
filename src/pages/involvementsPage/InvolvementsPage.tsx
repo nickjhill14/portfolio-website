@@ -1,10 +1,15 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
 import { CVPage } from '../../components/cvPage/CVPage';
+import { faGuitar } from '@fortawesome/free-solid-svg-icons';
 
 export default function InvolvementsPage() {
     return (
-        <CVPage label="Involvements Page" heading="Involvements">
+        <CVPage
+            label="Involvements Page"
+            heading="Involvements"
+            headingIcon={faGuitar}
+        >
             <CVSection
                 label="Guitarist Involvement"
                 heading="Guitarist"

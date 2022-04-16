@@ -1,10 +1,15 @@
 import { ExternalLink } from '../../components/externalLink/ExternalLink';
 import CVSection from '../../components/cvSection/CVSection';
 import { CVPage } from '../../components/cvPage/CVPage';
+import { faUserGraduate } from '@fortawesome/free-solid-svg-icons';
 
 export default function EducationPage() {
     return (
-        <CVPage label="Education Page" heading="Education">
+        <CVPage
+            label="Education Page"
+            heading="Education"
+            headingIcon={faUserGraduate}
+        >
             <CVSection
                 label="University Of Nottingham Education"
                 heading="MSc. With Honours In Computer Science (1st Class)"

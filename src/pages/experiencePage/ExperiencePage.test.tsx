@@ -5,13 +5,19 @@ import {
     expectRoleIsInDocument,
 } from '../../testUtils/assertionHelpers';
 
-describe('<EducationPage/>', () => {
+describe('<ExperiencePage/>', () => {
     describe('rendering', () => {
         it('renders the page', () => {
             render(<ExperiencePage />);
 
             expectRoleIsInDocument('region', 'Experience Page');
-            expectRoleIsInDocument('heading', 'Experience');
+            const headingElement = screen.getByRole('heading', {
+                name: 'Experience',
+            });
+            expect(headingElement.previousElementSibling).toHaveAttribute(
+                'data-icon',
+                'briefcase'
+            );
             expect(screen.getAllByRole('article')).toHaveLength(3);
         });
 
