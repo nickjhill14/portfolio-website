@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/static/css/main.30623e59.css",
+    "main.js": "/static/js/main.820d8a2e.js",
+    "static/media/landing-page-bg.jpg": "/static/media/landing-page-bg.4b501a970e664adbdb37.jpg",
+    "static/media/nicholas-hill-cv.pdf": "/static/media/nicholas-hill-cv.d3a9f68cc1af0f2133b2.pdf",
+    "index.html": "/index.html",
+    "main.30623e59.css.map": "/static/css/main.30623e59.css.map",
+    "main.820d8a2e.js.map": "/static/js/main.820d8a2e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.30623e59.css",
+    "static/js/main.820d8a2e.js"
+  ]
+}
